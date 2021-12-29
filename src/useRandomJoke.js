@@ -1,20 +1,24 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from "react";
+import axios from "axios";
 
-function useRandomJoke(firstName, lastName) {
-    const [joke, setJoke] = useState('')
-    useEffect(() => {
-        const fetchJoke = async () => {
-          await fetch(`http://api.icndb.com/jokes/random?firstName=${firstName}&lastName=${lastName}`)
-          .then(res => res.json())
-          .then(data => {
-            setJoke(data.value.joke)
-          })
-        }
-    
-        fetchJoke()
-    }, [firstName, lastName])
+const useRandomJoke = (firstName, lastName) => {
+  const [joke, setJoke] = useState("");
+  useEffect(() => {
+    const fetchJoke = async () => {
+      await axios
+        .get(
+          `http://api.icndb.com/jokes/random?firstName=${firstName}&lastName=${lastName}`
+        )
+        .then((res) => res.data)
+        .then((data) => {
+          setJoke(data.value.joke);
+        });
+    };
 
-    return joke
-}
+    fetchJoke();
+  }, [firstName, lastName]);
 
-export default useRandomJoke
+  return joke;
+};
+
+export default useRandomJoke;

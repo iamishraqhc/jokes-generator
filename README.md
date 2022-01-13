@@ -1,5 +1,7 @@
 # Jokes Generator App
 
+To be honest, the jokes are not funny at all.
+
 ![Preview](screenshot.png?raw=true)
 
 ## How to run the app

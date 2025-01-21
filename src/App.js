@@ -20,7 +20,7 @@ const App = () => {
     <div className="App">
       <center>
         <h1>Joke Generator</h1>
-        <h4>Enter your name and we will generate a joke</h4>
+        <h4>Please enter your name and we will generate a joke</h4>
         <form>
           <input type="text" placeholder="First Name" ref={firstNameRef} />
           <input type="text" placeholder="Last Name" ref={lastNameRef} />

@@ -30,18 +30,19 @@ input[type="password"] {
   box-sizing: border-box;
 }
 
-/* Set a style for all buttons */
+/* Update the style for the submit button */
 input[type="submit"] {
-  background-color: #04aa6d;
+  background-color: lightblue; /* Change the background color to light blue */
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 90%;
+  width: 75%; /* Change the width to 75% */
 }
 
 /* Add a hover effect for buttons */
 input[type="submit"]:hover {
   opacity: 0.8;
 }
+
